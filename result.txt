@@ -1,0 +1,101 @@
+Heart Disease Prediction
+
+Loading dataset from UCI repository...
+
+Dataset info:
+ Samples: 303
+ Features: 13
+
+Feature names:
+  ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+
+Target distribution:
+num
+0      164
+1       55
+2       36
+3       35
+4       13
+
+Binary target: 0=No disease (164)  1=Disease (139)
+
+After feature engineering: 15 features
+
+=======================================================
+MODEL COMPARISON
+=======================================================
+
+Logistic Regression
+  CV Accuracy : 0.814 ± 0.030
+  Test Acc    : 0.869
+  AUC-ROC     : 0.946
+              precision    recall  f1-score   support
+
+  No Disease       0.93      0.82      0.87        33
+     Disease       0.81      0.93      0.87        28
+
+    accuracy                           0.87        61
+   macro avg       0.87      0.87      0.87        61
+weighted avg       0.88      0.87      0.87        61
+
+
+KNN
+  CV Accuracy : 0.822 ± 0.027
+  Test Acc    : 0.869
+  AUC-ROC     : 0.941
+              precision    recall  f1-score   support
+
+  No Disease       0.93      0.82      0.87        33
+     Disease       0.81      0.93      0.87        28
+
+    accuracy                           0.87        61
+   macro avg       0.87      0.87      0.87        61
+weighted avg       0.88      0.87      0.87        61
+
+
+SVM
+  CV Accuracy : 0.781 ± 0.038
+  Test Acc    : 0.836
+  AUC-ROC     : 0.916
+              precision    recall  f1-score   support
+
+  No Disease       0.96      0.73      0.83        33
+     Disease       0.75      0.96      0.84        28
+
+    accuracy                           0.84        61
+   macro avg       0.85      0.85      0.84        61
+weighted avg       0.86      0.84      0.84        61
+
+
+Random Forest
+  CV Accuracy : 0.777 ± 0.016
+  Test Acc    : 0.885
+  AUC-ROC     : 0.957
+              precision    recall  f1-score   support
+
+  No Disease       0.93      0.85      0.89        33
+     Disease       0.84      0.93      0.88        28
+
+    accuracy                           0.89        61
+   macro avg       0.89      0.89      0.89        61
+weighted avg       0.89      0.89      0.89        61
+
+
+Gradient Boosting
+  CV Accuracy : 0.760 ± 0.030
+  Test Acc    : 0.918
+  AUC-ROC     : 0.964
+              precision    recall  f1-score   support
+
+  No Disease       0.97      0.88      0.92        33
+     Disease       0.87      0.96      0.92        28
+
+    accuracy                           0.92        61
+   macro avg       0.92      0.92      0.92        61
+weighted avg       0.92      0.92      0.92        61
+
+
+Best model by AUC: Gradient Boosting (0.964)
+
+Plot saved as project_results.png
+Feature importance plot saved as project_features.png
